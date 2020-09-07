@@ -21,6 +21,7 @@ namespace Linq_Lambda
         }
 
         List<Cabecera> cabeceras = null;
+        List<Cabecera> CabeceraFiltro = null;
         private void ObtenerData()
         {
             //Lista con clases Cabecera - Detalle
@@ -88,8 +89,25 @@ namespace Linq_Lambda
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Mostrar_Opciones_Linq();
-            dataGridView1.DataSource = cabeceras;
+
+            //SINTAXIS DE METODO :Expresion Lamba - Es una forma para definir funciones anonimas que no tienen nombre.
+            //Cuando usemos LInq siempre nos va devolver un objeto IEnumerable 
+            CabeceraFiltro = cabeceras.Where(x => x.NroDocumento.Equals("002")).ToList();
+
+            var ordenadoMenorAMayor = cabeceras.OrderByDescending(x => x.NroDocumento).ToList();
+            var sumaTotal = cabeceras.Sum(x => x.Total);
+            var MaxTotal = cabeceras.Max(x => x.Total);
+            var media = cabeceras.Average(x => x.Total);
+            var todosAprobados = cabeceras.All(x => x.Total >= 5);
+
+            //SINTAXIS DE CONSULTA o integrada : Similar al SQL
+            CabeceraFiltro = (from x in cabeceras
+                              where x.NroDocumento.Equals("001")
+                              select x
+                              ).ToList();
+            
+            MessageBox.Show(media.ToString());
+            //dataGridView1.DataSource = sumaNotas.ToString();
             dataGridView1.Refresh();
         }
     }
