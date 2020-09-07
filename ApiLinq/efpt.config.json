@@ -1,0 +1,61 @@
+﻿{
+   "ContextClassName": "PRUEBA_EFContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": "Models",
+   "OutputPath": "Models",
+   "ProjectRootNamespace": "ApiLinq",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[articulo]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[categoria]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[detalle_ingreso]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[detalle_venta]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[ingreso]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[persona]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[rol]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[usuario]"
+      },
+      {
+         "HasPrimaryKey": true,
+         "Name": "[dbo].[venta]"
+      }
+   ],
+   "UseDatabaseNames": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseInflector": false,
+   "UseLegacyPluralizer": false,
+   "UseNodaTime": false,
+   "UseSpatial": false,
+   "UseStoredProcedures": false
+}
